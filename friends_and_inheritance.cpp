@@ -7,7 +7,7 @@ using namespace std;
 /* class Person is a friend of class Animal. This allows class Animal's member function to access
    private and protected members of Person, as occurs in the function transform().
    Note that the empty declaration of the class Person is required, since class Animal uses Person
-   (as a param in member transform(), and Person uses Animal (declaring it as a friend). */
+   (as a param in member transform()), and Person uses Animal (declaring it as a friend). */
 class Person;
 
 class Animal {
