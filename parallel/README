@@ -1,0 +1,16 @@
+Useful sites for OpenMP tutorials:
+https://bisqwit.iki.fi/story/howto/opemp/     (!!!!!)
+https://people.sc.fsu.edu/~jburkardt/cpp_src/openmp/openmp.html
+https://computing.llnl.gov/tutorials/openMP/
+pages.tacc.utexas.edu/~eijkhout/pcse/html/index.html
+
+
+OpenMP topics still to cover:
+-Synchronisation clauses:
+ critical, atomic, ordered, barrier, nowait, collapse
+-Scheduling clauses:
+ schedule(type,chunk); static, dynamic, guided
+-Misc.:
+ flush,master,threadprivate
+-Other:
+ sections/section
