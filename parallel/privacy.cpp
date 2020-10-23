@@ -86,7 +86,7 @@ int main() {
        We can also use "default(shared)" to make all variables shared by default. */
     #pragma omp parallel default(shared) firstprivate(y) num_threads(2)
     {
-    // a += "squawk"; // won't compile if we include this, we haven't stated private/shared status of a
+    // a += "squawk"; // won't compile if we include this after stating default(none), since then we haven't stated private/shared status of a
     y += 5;
     cout << "Add 5 to the copied value of y, is now: " << y << endl;
     }

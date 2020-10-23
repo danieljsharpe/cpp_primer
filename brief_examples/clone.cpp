@@ -13,6 +13,7 @@ everything it contains.
 #include <vector>
 using namespace std;
 
+/* abstract base class */
 class Base
 {
     public:
@@ -20,12 +21,12 @@ class Base
     Base() {};
     virtual ~Base() = default; // note virtual destructor
 
-    virtual void doSomething() const = 0;
+    virtual void doSomething() const = 0; // pure virtual function
     virtual void push_back(const Base&) {};
     virtual void set(int,const Base&) {};
     virtual void print_vec() {};
 
-    virtual Base* clone() const = 0; // clone()
+    virtual Base* clone() const = 0; // clone(). Overridden in derived class
 };
 
 
@@ -37,7 +38,7 @@ class Derived : public Base
 
     // cloning
     virtual Derived* clone() const {
-        return new Derived(*this); }
+        return new Derived(*this); } // note that this calls the copy constructor!
 
     void push_back(const Base& obj)
         { vec.push_back(obj.clone()); }
